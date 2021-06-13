@@ -13,6 +13,8 @@
 		3174398C26768ADA002DA053 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3174398B26768ADA002DA053 /* Preview Assets.xcassets */; };
 		3174399726768ADA002DA053 /* QuickDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3174399626768ADA002DA053 /* QuickDictionaryTests.swift */; };
 		317439A226768ADA002DA053 /* QuickDictionaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317439A126768ADA002DA053 /* QuickDictionaryUITests.swift */; };
+		317439B3267693EF002DA053 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317439B2267693EF002DA053 /* HomeScreen.swift */; };
+		317439B726769422002DA053 /* CameraScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317439B626769422002DA053 /* CameraScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		3174399D26768ADA002DA053 /* QuickDictionaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickDictionaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		317439A126768ADA002DA053 /* QuickDictionaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickDictionaryUITests.swift; sourceTree = "<group>"; };
 		317439A326768ADA002DA053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		317439B2267693EF002DA053 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		317439B626769422002DA053 /* CameraScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,9 @@
 		3174397826768AD9002DA053 = {
 			isa = PBXGroup;
 			children = (
+				317439B1267693D8002DA053 /* View Model */,
+				317439B0267693CF002DA053 /* Repositories */,
+				317439AF267693C5002DA053 /* Views */,
 				3174398326768AD9002DA053 /* QuickDictionary */,
 				3174399526768ADA002DA053 /* QuickDictionaryTests */,
 				317439A026768ADA002DA053 /* QuickDictionaryUITests */,
@@ -128,6 +135,29 @@
 				317439A326768ADA002DA053 /* Info.plist */,
 			);
 			path = QuickDictionaryUITests;
+			sourceTree = "<group>";
+		};
+		317439AF267693C5002DA053 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				317439B2267693EF002DA053 /* HomeScreen.swift */,
+				317439B626769422002DA053 /* CameraScreen.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		317439B0267693CF002DA053 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		317439B1267693D8002DA053 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +291,8 @@
 			files = (
 				3174398726768AD9002DA053 /* ContentView.swift in Sources */,
 				3174398526768AD9002DA053 /* QuickDictionaryApp.swift in Sources */,
+				317439B726769422002DA053 /* CameraScreen.swift in Sources */,
+				317439B3267693EF002DA053 /* HomeScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

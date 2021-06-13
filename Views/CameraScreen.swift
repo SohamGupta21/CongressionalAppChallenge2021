@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  CameraScreen.swift
 //  QuickDictionary
 //
 //  Created by soham gupta on 6/13/21.
@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CameraScreen: View {
     var body: some View {
-        HomeScreen()
+        Text("Camera")
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct CameraScreen_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView{
-            ContentView()
+            CameraScreen()
         }
     }
 }
