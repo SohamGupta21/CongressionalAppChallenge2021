@@ -15,6 +15,8 @@
 		317439A226768ADA002DA053 /* QuickDictionaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317439A126768ADA002DA053 /* QuickDictionaryUITests.swift */; };
 		317439B3267693EF002DA053 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317439B2267693EF002DA053 /* HomeScreen.swift */; };
 		317439B726769422002DA053 /* CameraScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317439B626769422002DA053 /* CameraScreen.swift */; };
+		C9D5778A26769C7800FCED6F /* DictionaryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D5778926769C7800FCED6F /* DictionaryScreen.swift */; };
+		C9D5779026769E3300FCED6F /* CardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D5778F26769E3300FCED6F /* CardComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		317439A326768ADA002DA053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		317439B2267693EF002DA053 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		317439B626769422002DA053 /* CameraScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraScreen.swift; sourceTree = "<group>"; };
+		C9D5778926769C7800FCED6F /* DictionaryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryScreen.swift; sourceTree = "<group>"; };
+		C9D5778F26769E3300FCED6F /* CardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,8 +144,10 @@
 		317439AF267693C5002DA053 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C9D5778E26769E1500FCED6F /* Components */,
 				317439B2267693EF002DA053 /* HomeScreen.swift */,
 				317439B626769422002DA053 /* CameraScreen.swift */,
+				C9D5778926769C7800FCED6F /* DictionaryScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -158,6 +164,14 @@
 			children = (
 			);
 			path = "View Model";
+			sourceTree = "<group>";
+		};
+		C9D5778E26769E1500FCED6F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C9D5778F26769E3300FCED6F /* CardComponent.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,8 +303,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9D5778A26769C7800FCED6F /* DictionaryScreen.swift in Sources */,
 				3174398726768AD9002DA053 /* ContentView.swift in Sources */,
 				3174398526768AD9002DA053 /* QuickDictionaryApp.swift in Sources */,
+				C9D5779026769E3300FCED6F /* CardComponent.swift in Sources */,
 				317439B726769422002DA053 /* CameraScreen.swift in Sources */,
 				317439B3267693EF002DA053 /* HomeScreen.swift in Sources */,
 			);

@@ -11,16 +11,11 @@ struct HomeScreen: View {
     var body: some View {
         NavigationView{
             NavigationLink(
-                        destination: CameraScreen(),
-                        label: {
-                            Text("Home")
-            })
-                .navigationTitle("Home")
-                .navigationBarItems(leading: Text("Hello"))
+                destination: CameraScreen(),
+                label: {
+                    Text("Home")
+            }).navigationTitle("Home")
         }
-        
-        
-        
     }
 }
 

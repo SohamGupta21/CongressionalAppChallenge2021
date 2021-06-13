@@ -15,8 +15,6 @@ struct CameraScreen: View {
 
 struct CameraScreen_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView{
             CameraScreen()
-        }
     }
 }
