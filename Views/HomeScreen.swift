@@ -14,7 +14,7 @@ struct HomeScreen: View {
                 destination: CameraScreen(),
                 label: {
                     Text("Home")
-            }).navigationTitle("Home")
+            }).navigationTitle("Hello Abgay")
         }
     }
 }
