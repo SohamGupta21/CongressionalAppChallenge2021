@@ -19,6 +19,8 @@ struct DictionaryScreen: View {
                 Spacer()
                 CardComponent()
                     .padding()
+                CardComponent()
+                    .padding()
             }
             .navigationTitle(Text("Dictionary"))
         }
