@@ -22,83 +22,81 @@ struct CardDetailedView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-//            VStack{
-//                GeometryReader{ geo in
-                    Image(image)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-//                        .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: .center)
-//                }
-//            }
+            ScrollView{
+                Image(image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
                 Spacer()
-            HStack {
-                VStack(alignment: .leading) {
-                    Text(word)
-                        .font(.title)
-                        .foregroundColor(.primary)
-                        .lineLimit(3)
-                    Text(sound)
-                        .font(.title3)
-                        .padding(.top, -8)
-                    Text(partOfSpeech.lowercased())
-                        .font(.callout)
-                        .italic()
-                        .foregroundColor(.secondary)
-                    Text(meaning)
-                        .padding(.top, -4)
-                        .padding(.leading)
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text(word)
+                            .font(.title)
+                            .foregroundColor(.primary)
+                            .lineLimit(3)
+                        Text(sound)
+                            .font(.title3)
+                            .padding(.top, -8)
+                        Text(partOfSpeech.lowercased())
+                            .font(.callout)
+                            .italic()
+                            .foregroundColor(.secondary)
+                        Text(meaning)
+                            .padding(.top, -4)
+                            .padding(.leading)
+                        
+                    }
+                    .layoutPriority(100)
+                 }
+                .padding(.leading)
+                .padding(.top)
+                .padding(.trailing)
+                HStack{
+                    VStack(alignment:.leading){
+                        Text("Examples:")
+                            .font(.headline)
+                        Text("1. Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah oeuwrflreuf Blah Blah Blah ")
+                            .padding(.leading)
+                            .padding(.trailing)
+                        Text("2. Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah ")
+                            .padding(.leading)
+                            .padding(.trailing)
+                    }
+                }
+                .padding(.leading)
+                .layoutPriority(100)
+                
+                HStack {
+                    Button(action: {
+                        //firebase right here
+                    }, label: {
+                        Label(String(upvotes), systemImage: "hand.thumbsup")
+                            .font(.callout)
+                    })
+                    .buttonStyle(AllButtonStyle())
+                    
+                    Spacer()
+                    Button(action: {
+                        //firebase right here
+                    }, label: {
+                        Label(String(downvotes), systemImage: "hand.thumbsdown.fill")
+                            .font(.callout)
+                    })
+                    .buttonStyle(AllButtonStyle())
                     
                 }
-                .layoutPriority(100)
-             }
-            .padding(.leading)
-            .padding(.top)
-            .padding(.trailing)
-            HStack{
-                VStack(alignment:.leading){
-                    Text("Examples:")
-                        .font(.headline)
-                    Text("1. Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah oeuwrflreuf Blah Blah Blah ")
-                        .padding(.leading)
-                        .padding(.trailing)
-                    Text("2. Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah ")
-                        .padding(.leading)
-                        .padding(.trailing)
-                }
+                .font(.caption)
+                .padding()
+                .padding(.leading)
+                .padding(.trailing)
             }
-            .padding(.leading)
-            .layoutPriority(100)
+            .cornerRadius(10)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(LinearGradient(gradient: Gradient(colors: [Color.red, Color.orange]), startPoint: .leading, endPoint: .trailing), lineWidth: 2)
+            )
+            .padding([.top, .horizontal, .bottom])
             
-            HStack {
-                Button(action: {
-                    //firebase right here
-                }, label: {
-                    Label(String(upvotes), systemImage: "hand.thumbsup")
-                        .font(.callout)
-                })
-                .buttonStyle(AllButtonStyle())
-                
-                Spacer()
-                Button(action: {
-                    //firebase right here
-                }, label: {
-                    Label(String(downvotes), systemImage: "hand.thumbsdown.fill")
-                        .font(.callout)
-                })
-                .buttonStyle(AllButtonStyle())
-                
-            }
-            .font(.caption)
-            .padding()
-            .padding(.leading)
-            .padding(.trailing)
-        }
-        .cornerRadius(10)
-        .overlay(
-            RoundedRectangle(cornerRadius: 10)
-                .stroke(LinearGradient(gradient: Gradient(colors: [Color.red, Color.orange]), startPoint: .leading, endPoint: .trailing), lineWidth: 2)
-        )
-        .padding([.top, .horizontal, .bottom])
+    }
     }
 }
 
