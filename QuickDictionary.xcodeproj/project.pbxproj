@@ -16,8 +16,12 @@
 		317439B3267693EF002DA053 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317439B2267693EF002DA053 /* HomeScreen.swift */; };
 		317439B726769422002DA053 /* CameraScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317439B626769422002DA053 /* CameraScreen.swift */; };
 		31A4E7BF26799F4900B6F404 /* CardDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A4E7BE26799F4900B6F404 /* CardDetailedView.swift */; };
+		3BEB7A6997EB37CFF8A59FD9 /* Pods_QuickDictionaryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34BC4DDD6F409E4D31B5E30 /* Pods_QuickDictionaryTests.framework */; };
+		C9D1B8E32679AD5C002B222F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9D1B8E22679AD5B002B222F /* GoogleService-Info.plist */; };
 		C9D5778A26769C7800FCED6F /* DictionaryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D5778926769C7800FCED6F /* DictionaryScreen.swift */; };
 		C9D5779026769E3300FCED6F /* CardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D5778F26769E3300FCED6F /* CardComponent.swift */; };
+		FABA42578568C9A1E880BCF0 /* Pods_QuickDictionary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBF0D433C61FD4C9F4BBB0B5 /* Pods_QuickDictionary.framework */; };
+		FC60C5E282C8E5E6010AF958 /* Pods_QuickDictionary_QuickDictionaryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4930084687FA8D5F4DB64711 /* Pods_QuickDictionary_QuickDictionaryUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +57,18 @@
 		317439B2267693EF002DA053 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		317439B626769422002DA053 /* CameraScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraScreen.swift; sourceTree = "<group>"; };
 		31A4E7BE26799F4900B6F404 /* CardDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailedView.swift; sourceTree = "<group>"; };
+		4930084687FA8D5F4DB64711 /* Pods_QuickDictionary_QuickDictionaryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickDictionary_QuickDictionaryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A453967AB9E10B8C945A1D6 /* Pods-QuickDictionary-QuickDictionaryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickDictionary-QuickDictionaryUITests.debug.xcconfig"; path = "Target Support Files/Pods-QuickDictionary-QuickDictionaryUITests/Pods-QuickDictionary-QuickDictionaryUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5125AE893A50309E26E6E118 /* Pods-QuickDictionary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickDictionary.debug.xcconfig"; path = "Target Support Files/Pods-QuickDictionary/Pods-QuickDictionary.debug.xcconfig"; sourceTree = "<group>"; };
+		6FAF06D35B78CEBE8EBB4BEE /* Pods-QuickDictionaryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickDictionaryTests.debug.xcconfig"; path = "Target Support Files/Pods-QuickDictionaryTests/Pods-QuickDictionaryTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A34BC4DDD6F409E4D31B5E30 /* Pods_QuickDictionaryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickDictionaryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA41B0455D59A7CB6FAAD623 /* Pods-QuickDictionaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickDictionaryTests.release.xcconfig"; path = "Target Support Files/Pods-QuickDictionaryTests/Pods-QuickDictionaryTests.release.xcconfig"; sourceTree = "<group>"; };
+		BBF0D433C61FD4C9F4BBB0B5 /* Pods_QuickDictionary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickDictionary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDCBF8558C7B36717585A397 /* Pods-QuickDictionary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickDictionary.release.xcconfig"; path = "Target Support Files/Pods-QuickDictionary/Pods-QuickDictionary.release.xcconfig"; sourceTree = "<group>"; };
+		C9D1B8E22679AD5B002B222F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C9D5778926769C7800FCED6F /* DictionaryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryScreen.swift; sourceTree = "<group>"; };
 		C9D5778F26769E3300FCED6F /* CardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardComponent.swift; sourceTree = "<group>"; };
+		DFA9DAA781C552FACEB6A710 /* Pods-QuickDictionary-QuickDictionaryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickDictionary-QuickDictionaryUITests.release.xcconfig"; path = "Target Support Files/Pods-QuickDictionary-QuickDictionaryUITests/Pods-QuickDictionary-QuickDictionaryUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABA42578568C9A1E880BCF0 /* Pods_QuickDictionary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BEB7A6997EB37CFF8A59FD9 /* Pods_QuickDictionaryTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +92,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC60C5E282C8E5E6010AF958 /* Pods_QuickDictionary_QuickDictionaryUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29906CF219B48EC0FA3DD23A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5125AE893A50309E26E6E118 /* Pods-QuickDictionary.debug.xcconfig */,
+				BDCBF8558C7B36717585A397 /* Pods-QuickDictionary.release.xcconfig */,
+				4A453967AB9E10B8C945A1D6 /* Pods-QuickDictionary-QuickDictionaryUITests.debug.xcconfig */,
+				DFA9DAA781C552FACEB6A710 /* Pods-QuickDictionary-QuickDictionaryUITests.release.xcconfig */,
+				6FAF06D35B78CEBE8EBB4BEE /* Pods-QuickDictionaryTests.debug.xcconfig */,
+				AA41B0455D59A7CB6FAAD623 /* Pods-QuickDictionaryTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		3174397826768AD9002DA053 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +123,8 @@
 				3174399526768ADA002DA053 /* QuickDictionaryTests */,
 				317439A026768ADA002DA053 /* QuickDictionaryUITests */,
 				3174398226768AD9002DA053 /* Products */,
+				29906CF219B48EC0FA3DD23A /* Pods */,
+				71FDCA1DF18705CDF3B4387D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +145,7 @@
 				3174398626768AD9002DA053 /* ContentView.swift */,
 				3174398826768ADA002DA053 /* Assets.xcassets */,
 				3174398D26768ADA002DA053 /* Info.plist */,
+				C9D1B8E22679AD5B002B222F /* GoogleService-Info.plist */,
 				3174398A26768ADA002DA053 /* Preview Content */,
 			);
 			path = QuickDictionary;
@@ -168,6 +202,16 @@
 			path = "View Model";
 			sourceTree = "<group>";
 		};
+		71FDCA1DF18705CDF3B4387D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBF0D433C61FD4C9F4BBB0B5 /* Pods_QuickDictionary.framework */,
+				4930084687FA8D5F4DB64711 /* Pods_QuickDictionary_QuickDictionaryUITests.framework */,
+				A34BC4DDD6F409E4D31B5E30 /* Pods_QuickDictionaryTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C9D5778E26769E1500FCED6F /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,9 +228,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 317439A626768ADA002DA053 /* Build configuration list for PBXNativeTarget "QuickDictionary" */;
 			buildPhases = (
+				3DB2D7B1B8FC6E276D56119A /* [CP] Check Pods Manifest.lock */,
 				3174397D26768AD9002DA053 /* Sources */,
 				3174397E26768AD9002DA053 /* Frameworks */,
 				3174397F26768AD9002DA053 /* Resources */,
+				4DD3601A337B56943662A30C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -201,6 +247,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 317439A926768ADA002DA053 /* Build configuration list for PBXNativeTarget "QuickDictionaryTests" */;
 			buildPhases = (
+				B88CCCF2280C72EE15996997 /* [CP] Check Pods Manifest.lock */,
 				3174398E26768ADA002DA053 /* Sources */,
 				3174398F26768ADA002DA053 /* Frameworks */,
 				3174399026768ADA002DA053 /* Resources */,
@@ -219,9 +266,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 317439AC26768ADA002DA053 /* Build configuration list for PBXNativeTarget "QuickDictionaryUITests" */;
 			buildPhases = (
+				12161AB612175DEE916EE344 /* [CP] Check Pods Manifest.lock */,
 				3174399926768ADA002DA053 /* Sources */,
 				3174399A26768ADA002DA053 /* Frameworks */,
 				3174399B26768ADA002DA053 /* Resources */,
+				ACC7EC814AF2BE872BDFCD6B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -282,6 +331,7 @@
 			files = (
 				3174398C26768ADA002DA053 /* Preview Assets.xcassets in Resources */,
 				3174398926768ADA002DA053 /* Assets.xcassets in Resources */,
+				C9D1B8E32679AD5C002B222F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +350,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12161AB612175DEE916EE344 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuickDictionary-QuickDictionaryUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3DB2D7B1B8FC6E276D56119A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuickDictionary-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DD3601A337B56943662A30C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuickDictionary/Pods-QuickDictionary-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuickDictionary/Pods-QuickDictionary-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuickDictionary/Pods-QuickDictionary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACC7EC814AF2BE872BDFCD6B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuickDictionary-QuickDictionaryUITests/Pods-QuickDictionary-QuickDictionaryUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuickDictionary-QuickDictionaryUITests/Pods-QuickDictionary-QuickDictionaryUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuickDictionary-QuickDictionaryUITests/Pods-QuickDictionary-QuickDictionaryUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B88CCCF2280C72EE15996997 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuickDictionaryTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3174397D26768AD9002DA053 /* Sources */ = {
@@ -466,6 +619,7 @@
 		};
 		317439A726768ADA002DA053 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5125AE893A50309E26E6E118 /* Pods-QuickDictionary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -488,6 +642,7 @@
 		};
 		317439A826768ADA002DA053 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDCBF8558C7B36717585A397 /* Pods-QuickDictionary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -510,6 +665,7 @@
 		};
 		317439AA26768ADA002DA053 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FAF06D35B78CEBE8EBB4BEE /* Pods-QuickDictionaryTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -531,6 +687,7 @@
 		};
 		317439AB26768ADA002DA053 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA41B0455D59A7CB6FAAD623 /* Pods-QuickDictionaryTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -552,6 +709,7 @@
 		};
 		317439AD26768ADA002DA053 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A453967AB9E10B8C945A1D6 /* Pods-QuickDictionary-QuickDictionaryUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -571,6 +729,7 @@
 		};
 		317439AE26768ADA002DA053 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFA9DAA781C552FACEB6A710 /* Pods-QuickDictionary-QuickDictionaryUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -22,10 +22,15 @@ struct CardDetailedView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Image(image)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-            Spacer()
+//            VStack{
+//                GeometryReader{ geo in
+                    Image(image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+//                        .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: .center)
+//                }
+//            }
+                Spacer()
             HStack {
                 VStack(alignment: .leading) {
                     Text(word)
@@ -45,9 +50,7 @@ struct CardDetailedView: View {
                     
                 }
                 .layoutPriority(100)
- 
-                Spacer()
-            }
+             }
             .padding(.leading)
             .padding(.top)
             .padding(.trailing)
@@ -55,7 +58,7 @@ struct CardDetailedView: View {
                 VStack(alignment:.leading){
                     Text("Examples:")
                         .font(.headline)
-                    Text("1. Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah ")
+                    Text("1. Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah oeuwrflreuf Blah Blah Blah ")
                         .padding(.leading)
                         .padding(.trailing)
                     Text("2. Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah ")
@@ -95,7 +98,7 @@ struct CardDetailedView: View {
             RoundedRectangle(cornerRadius: 10)
                 .stroke(LinearGradient(gradient: Gradient(colors: [Color.red, Color.orange]), startPoint: .leading, endPoint: .trailing), lineWidth: 2)
         )
-        .padding([.top, .horizontal])
+        .padding([.top, .horizontal, .bottom])
     }
 }
 

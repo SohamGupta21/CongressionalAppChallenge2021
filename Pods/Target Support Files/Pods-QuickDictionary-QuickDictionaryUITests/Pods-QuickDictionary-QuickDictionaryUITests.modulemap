@@ -1,0 +1,6 @@
+framework module Pods_QuickDictionary_QuickDictionaryUITests {
+  umbrella header "Pods-QuickDictionary-QuickDictionaryUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
