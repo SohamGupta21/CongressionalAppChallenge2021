@@ -15,6 +15,7 @@
 		317439A226768ADA002DA053 /* QuickDictionaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317439A126768ADA002DA053 /* QuickDictionaryUITests.swift */; };
 		317439B3267693EF002DA053 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317439B2267693EF002DA053 /* HomeScreen.swift */; };
 		317439B726769422002DA053 /* CameraScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317439B626769422002DA053 /* CameraScreen.swift */; };
+		31763A6D267A6DEF00CD7B6D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31763A6C267A6DEF00CD7B6D /* LoginView.swift */; };
 		31A4E7BF26799F4900B6F404 /* CardDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A4E7BE26799F4900B6F404 /* CardDetailedView.swift */; };
 		31F0C2C02679BDA700437218 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 31F0C2BF2679BDA700437218 /* GoogleService-Info.plist */; };
 		3BEB7A6997EB37CFF8A59FD9 /* Pods_QuickDictionaryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34BC4DDD6F409E4D31B5E30 /* Pods_QuickDictionaryTests.framework */; };
@@ -56,6 +57,7 @@
 		317439A326768ADA002DA053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		317439B2267693EF002DA053 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		317439B626769422002DA053 /* CameraScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraScreen.swift; sourceTree = "<group>"; };
+		31763A6C267A6DEF00CD7B6D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		31A4E7BE26799F4900B6F404 /* CardDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailedView.swift; sourceTree = "<group>"; };
 		31F0C2BF2679BDA700437218 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4930084687FA8D5F4DB64711 /* Pods_QuickDictionary_QuickDictionaryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickDictionary_QuickDictionaryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,6 +185,7 @@
 				317439B2267693EF002DA053 /* HomeScreen.swift */,
 				317439B626769422002DA053 /* CameraScreen.swift */,
 				C9D5778926769C7800FCED6F /* DictionaryScreen.swift */,
+				31763A6C267A6DEF00CD7B6D /* LoginView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				C9D5779026769E3300FCED6F /* CardComponent.swift in Sources */,
 				31A4E7BF26799F4900B6F404 /* CardDetailedView.swift in Sources */,
 				317439B726769422002DA053 /* CameraScreen.swift in Sources */,
+				31763A6D267A6DEF00CD7B6D /* LoginView.swift in Sources */,
 				317439B3267693EF002DA053 /* HomeScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
