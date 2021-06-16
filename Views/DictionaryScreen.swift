@@ -11,7 +11,7 @@ import Foundation
 struct DictionaryScreen: View {
     @State private var isPresented = false
     @State var results = [TaskEntry]()
-    @State var word = "insult"
+    @State var word = ""
     @State var cards: [CardComponent] = []
 
     var body: some View {
@@ -25,7 +25,7 @@ struct DictionaryScreen: View {
                 
                 HStack{
                     Image(systemName: "magnifyingglass")
-                    TextField("Placeholder", text: $word){
+                    TextField("Search", text: $word){
                         loadData()
                     }
                 }
