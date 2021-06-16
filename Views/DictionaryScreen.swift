@@ -31,11 +31,18 @@ struct DictionaryScreen: View {
     //                            .on
     //                    }
                         ForEach(cards.indices, id: \.self){ card in
-                            cards[card]
-                                .onTapGesture {
-    //                                cards[card].downvotes = cards[card].downvotes + 1
-                                    print("got here")
-                                }
+                            Button(action:{
+                                isPresented = true
+                            },label:{
+                                cards[card]
+                                    .onTapGesture {
+                                        print("got here")
+                                        isPresented = true
+                                    }
+                                    .foregroundColor(Color.white)
+                            })
+                            
+                            
                         }
                         Spacer()
                     }
@@ -44,7 +51,10 @@ struct DictionaryScreen: View {
             .navigationBarTitle("", displayMode: .inline)
             .navigationBarHidden(true)
             .fullScreenCover(isPresented: $isPresented){
-                CardComponent()
+                NavigationView{
+                    CardDetailedView(word: "insanity", sound: "/inˈsanədē/", meaning: "the state of being seriously mentally ill", upvotes: 5, downvotes: 3, partOfSpeech: "noun", image: "swiftui-button")
+                }
+                
             }
         }
     }
