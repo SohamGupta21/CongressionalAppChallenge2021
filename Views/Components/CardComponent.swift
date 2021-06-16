@@ -81,6 +81,7 @@ struct CardComponent: View {
         .overlay(
             RoundedRectangle(cornerRadius: 10)
                 .stroke(LinearGradient(gradient: Gradient(colors: [Color.red, Color.orange]), startPoint: .leading, endPoint: .trailing), lineWidth: 2)
+                .contentShape(Rectangle())
         )
         .padding([.top, .horizontal])
     }
