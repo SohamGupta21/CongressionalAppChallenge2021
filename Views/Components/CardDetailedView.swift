@@ -21,21 +21,20 @@ struct CardDetailedView: View {
     //upvotes, downvotes, speaker button, image, part of speech
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Image(image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
- 
+            Spacer()
             HStack {
                 VStack(alignment: .leading) {
-                    
-                        Text(word)
-                            .font(.title)
-                            .foregroundColor(.primary)
-                            .lineLimit(3)
-                        Text(sound)
-                            .font(.title3)
-                            .padding(.top, -8)
+                    Text(word)
+                        .font(.title)
+                        .foregroundColor(.primary)
+                        .lineLimit(3)
+                    Text(sound)
+                        .font(.title3)
+                        .padding(.top, -8)
                     Text(partOfSpeech.lowercased())
                         .font(.callout)
                         .italic()
@@ -52,6 +51,21 @@ struct CardDetailedView: View {
             .padding(.leading)
             .padding(.top)
             .padding(.trailing)
+            HStack{
+                VStack(alignment:.leading){
+                    Text("Examples:")
+                        .font(.headline)
+                    Text("1. Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah ")
+                        .padding(.leading)
+                        .padding(.trailing)
+                    Text("2. Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah ")
+                        .padding(.leading)
+                        .padding(.trailing)
+                }
+            }
+            .padding(.leading)
+            .layoutPriority(100)
+            
             HStack {
                 Button(action: {
                     //firebase right here

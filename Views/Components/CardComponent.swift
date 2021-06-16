@@ -41,11 +41,12 @@ struct CardComponent: View {
                         .italic()
                         .foregroundColor(.secondary)
                     Text(meaning)
+                        .foregroundColor(.black)
                         .padding(.top, -4)
 //                            .padding(.leading)
                     
                 }
-                .layoutPriority(100)
+//                .layoutPriority(100)
  
                 Spacer()
             }
