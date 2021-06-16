@@ -16,9 +16,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView{
-            ContentView()
-        }
+        ContentView()
     }
 }
 
@@ -28,6 +26,9 @@ struct Home: View {
     var body: some View {
         if self.status{
             CameraScreen()
+                .navigationBarTitle("")
+                .navigationBarHidden(true)
+                .navigationBarBackButtonHidden(true)
         } else {
             VStack{
                 ZStack{
@@ -40,8 +41,8 @@ struct Home: View {
             }
             
             .navigationBarTitle("")
-                    .navigationBarHidden(true)
-                    .navigationBarBackButtonHidden(true)
+            .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
                     .onAppear() {
                         NotificationCenter.default.addObserver(forName: NSNotification.Name("status"), object: nil, queue: .main) { (_) in
                             self.status = UserDefaults.standard.value(forKey: "status") as? Bool ?? false
@@ -285,6 +286,7 @@ struct SignUp : View {
         }
         
         .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(true)
     }
     
     func register(){

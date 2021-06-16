@@ -26,26 +26,24 @@ struct CardDetailedView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                 Spacer()
-                HStack {
-                    VStack(alignment: .leading) {
-                        Text(word)
-                            .font(.title)
-                            .foregroundColor(.primary)
-                            .lineLimit(3)
-                        Text(sound)
-                            .font(.title3)
-                            .padding(.top, -8)
-                        Text(partOfSpeech.lowercased())
-                            .font(.callout)
-                            .italic()
-                            .foregroundColor(.secondary)
-                        Text(meaning)
-                            .padding(.top, -4)
-                            .padding(.leading)
-                        
-                    }
-                    .layoutPriority(100)
-                 }
+                VStack(alignment: .leading){
+                    Text(word)
+                        .font(.title)
+                        .foregroundColor(.primary)
+                        .lineLimit(3)
+                    Text(sound)
+                        .font(.title3)
+                        .padding(.top, -8)
+                    Text(partOfSpeech.lowercased())
+                        .font(.callout)
+                        .italic()
+                        .foregroundColor(.secondary)
+                    Text(meaning)
+                        .padding(.top, -4)
+                        .padding(.leading)
+                    
+                }
+                .layoutPriority(100)
                 .padding(.leading)
                 .padding(.top)
                 .padding(.trailing)
