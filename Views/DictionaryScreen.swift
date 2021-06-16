@@ -11,8 +11,10 @@ import Foundation
 struct DictionaryScreen: View {
     @State private var isPresented = false
     @State var results = [TaskEntry]()
+    @State var word = "insult"
+    @State var cards: [CardComponent] = []
+
     var body: some View {
-        var cards = [CardComponent(word: "insanity", sound: "/inˈsanədē/", meaning: "the state of being seriously mentally ill", upvotes: 5, downvotes: 3, partOfSpeech: "noun", image: "swiftui-button"),CardComponent(word: "insanity", sound: "/inˈsanədē/", meaning: "the state of being seriously mentally ill", upvotes: 5, downvotes: 3, partOfSpeech: "noun", image: "swiftui-button"),CardComponent(word: "insanity", sound: "/inˈsanədē/", meaning: "the state of being seriously mentally ill", upvotes: 5, downvotes: 3, partOfSpeech: "noun", image: "swiftui-button"),CardComponent(word: "insanity", sound: "/inˈsanədē/", meaning: "the state of being seriously mentally ill", upvotes: 5, downvotes: 3, partOfSpeech: "noun", image: "swiftui-button"),CardComponent(word: "insanity", sound: "/inˈsanədē/", meaning: "the state of being seriously mentally ill", upvotes: 5, downvotes: 3, partOfSpeech: "noun", image: "swiftui-button"),CardComponent(word: "insanity", sound: "/inˈsanədē/", meaning: "the state of being seriously mentally ill", upvotes: 5, downvotes: 3, partOfSpeech: "noun", image: "swiftui-button")]
         NavigationView{
             VStack{
                 HStack{
@@ -23,7 +25,9 @@ struct DictionaryScreen: View {
                 
                 HStack{
                     Image(systemName: "magnifyingglass")
-                    TextField("Placeholder", text: .constant(""))
+                    TextField("Placeholder", text: $word){
+                        loadData()
+                    }
                 }
                 .padding()
                 ScrollView{
@@ -64,7 +68,9 @@ struct DictionaryScreen: View {
     }
     
     func loadData() {
-        guard let url = URL(string: "https://api.dictionaryapi.dev/api/v2/entries/en_US/hello") else {
+        self.cards.removeAll()
+        var full_word = "https://api.dictionaryapi.dev/api/v2/entries/en_US/" + word
+        guard let url = URL(string: full_word ) else {
             print("Your API end point is Invalid")
             return
         }
@@ -76,6 +82,9 @@ struct DictionaryScreen: View {
                     DispatchQueue.main.async {
                         self.results = response
                         print("FWIUWEIFUWEIUFWEIFYGWEIYFGK", response)
+                        for meaning in response[0].meanings{
+                            self.cards.append(CardComponent(word: response[0].word, sound: response[0].phonetics[0].audio ?? "sdfsd", meaning: meaning.definitions?[0].definition ?? "sdfsf", upvotes: 5, downvotes: 5, partOfSpeech: meaning.partOfSpeech ?? "sdfdfs", image: "swiftui-button"))
+                        }
                     }
                     return
                 }else{
@@ -91,16 +100,6 @@ struct DictionaryScreen_Previews: PreviewProvider {
     static var previews: some View {
         DictionaryScreen()
     }
-}
-
-struct Response: Codable {
-    var results: [Result]
-}
-
-struct Result: Codable {
-    var word: String
-    var phonetics: [String]
-    var meanings: [String]
 }
 
 struct TaskEntry: Codable  {
