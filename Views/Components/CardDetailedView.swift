@@ -21,10 +21,10 @@ struct CardDetailedView: View {
     //upvotes, downvotes, speaker button, image, part of speech
     var body: some View {
         VStack(alignment: .leading) {
-                ScrollView{
-                    Image(image)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
+            ScrollView{
+                Image(image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
                 Spacer()
                 VStack(alignment: .leading){
                     Text(word)
@@ -44,9 +44,9 @@ struct CardDetailedView: View {
                     
                 }
                 .layoutPriority(100)
-                .padding(.leading)
                 .padding(.top)
-                .padding(.trailing)
+                .padding(.leading)
+                
                 HStack{
                     VStack(alignment:.leading){
                         Text("Examples:")
@@ -93,7 +93,7 @@ struct CardDetailedView: View {
             )
             .padding([.top, .horizontal, .bottom])
             
-    }
+        }
     }
 }
 
