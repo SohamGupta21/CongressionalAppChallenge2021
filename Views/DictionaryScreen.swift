@@ -50,6 +50,7 @@ struct DictionaryScreen: View {
             }
             .navigationBarTitle("", displayMode: .inline)
             .navigationBarHidden(true)
+            
             .sheet(isPresented: $isPresented){
                 NavigationView{
                     CardDetailedView(word: "insanity", sound: "/inˈsanədē/", meaning: "the state of being seriously mentally ill", upvotes: 5, downvotes: 3, partOfSpeech: "noun", image: "swiftui-button")

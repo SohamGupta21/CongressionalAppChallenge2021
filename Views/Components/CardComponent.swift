@@ -41,7 +41,7 @@ struct CardComponent: View {
                         .italic()
                         .foregroundColor(.secondary)
                     Text(meaning)
-                        .foregroundColor(.black)
+                        .foregroundColor(.primary)
                         .padding(.top, -4)
 //                            .padding(.leading)
                     
@@ -90,7 +90,7 @@ struct CardComponent: View {
 struct AllButtonStyle: ButtonStyle{
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
-            .foregroundColor(.black)
+            .foregroundColor(.primary)
     }
 }
 
