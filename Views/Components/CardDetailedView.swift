@@ -19,13 +19,12 @@ struct CardDetailedView: View {
     var partOfSpeech: String
     var image: String
     //upvotes, downvotes, speaker button, image, part of speech
-    
     var body: some View {
         VStack(alignment: .leading) {
-            ScrollView{
-                Image(image)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
+                ScrollView{
+                    Image(image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
                 Spacer()
                 VStack(alignment: .leading){
                     Text(word)

@@ -15,6 +15,8 @@ struct HomeScreen: View {
                 label: {
                     Text("Home")
             }).navigationTitle("Hello Abgay")
+                .navigationBarTitle("", displayMode: .inline)
+                .navigationBarHidden(true)
         }
     }
 }
