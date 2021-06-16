@@ -56,7 +56,7 @@ struct CameraScreen: View {
                                         .fill(Color.white)
                                         .frame(width: 65, height: 65)
                                     Circle()
-                                        .stroke(Color.white, lineWidth:2)
+                                        .stroke(Color.white, lineWidth:3)
                                         .frame(width:75, height:75)
                                 }
                             })
