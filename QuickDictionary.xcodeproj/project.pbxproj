@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,8 +16,8 @@
 		317439B3267693EF002DA053 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317439B2267693EF002DA053 /* HomeScreen.swift */; };
 		317439B726769422002DA053 /* CameraScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317439B626769422002DA053 /* CameraScreen.swift */; };
 		31A4E7BF26799F4900B6F404 /* CardDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A4E7BE26799F4900B6F404 /* CardDetailedView.swift */; };
+		31F0C2C02679BDA700437218 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 31F0C2BF2679BDA700437218 /* GoogleService-Info.plist */; };
 		3BEB7A6997EB37CFF8A59FD9 /* Pods_QuickDictionaryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34BC4DDD6F409E4D31B5E30 /* Pods_QuickDictionaryTests.framework */; };
-		C9D1B8E32679AD5C002B222F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9D1B8E22679AD5B002B222F /* GoogleService-Info.plist */; };
 		C9D5778A26769C7800FCED6F /* DictionaryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D5778926769C7800FCED6F /* DictionaryScreen.swift */; };
 		C9D5779026769E3300FCED6F /* CardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D5778F26769E3300FCED6F /* CardComponent.swift */; };
 		FABA42578568C9A1E880BCF0 /* Pods_QuickDictionary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBF0D433C61FD4C9F4BBB0B5 /* Pods_QuickDictionary.framework */; };
@@ -57,6 +57,7 @@
 		317439B2267693EF002DA053 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		317439B626769422002DA053 /* CameraScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraScreen.swift; sourceTree = "<group>"; };
 		31A4E7BE26799F4900B6F404 /* CardDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailedView.swift; sourceTree = "<group>"; };
+		31F0C2BF2679BDA700437218 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4930084687FA8D5F4DB64711 /* Pods_QuickDictionary_QuickDictionaryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickDictionary_QuickDictionaryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A453967AB9E10B8C945A1D6 /* Pods-QuickDictionary-QuickDictionaryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickDictionary-QuickDictionaryUITests.debug.xcconfig"; path = "Target Support Files/Pods-QuickDictionary-QuickDictionaryUITests/Pods-QuickDictionary-QuickDictionaryUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5125AE893A50309E26E6E118 /* Pods-QuickDictionary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickDictionary.debug.xcconfig"; path = "Target Support Files/Pods-QuickDictionary/Pods-QuickDictionary.debug.xcconfig"; sourceTree = "<group>"; };
@@ -65,7 +66,6 @@
 		AA41B0455D59A7CB6FAAD623 /* Pods-QuickDictionaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickDictionaryTests.release.xcconfig"; path = "Target Support Files/Pods-QuickDictionaryTests/Pods-QuickDictionaryTests.release.xcconfig"; sourceTree = "<group>"; };
 		BBF0D433C61FD4C9F4BBB0B5 /* Pods_QuickDictionary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickDictionary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDCBF8558C7B36717585A397 /* Pods-QuickDictionary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickDictionary.release.xcconfig"; path = "Target Support Files/Pods-QuickDictionary/Pods-QuickDictionary.release.xcconfig"; sourceTree = "<group>"; };
-		C9D1B8E22679AD5B002B222F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C9D5778926769C7800FCED6F /* DictionaryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryScreen.swift; sourceTree = "<group>"; };
 		C9D5778F26769E3300FCED6F /* CardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardComponent.swift; sourceTree = "<group>"; };
 		DFA9DAA781C552FACEB6A710 /* Pods-QuickDictionary-QuickDictionaryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickDictionary-QuickDictionaryUITests.release.xcconfig"; path = "Target Support Files/Pods-QuickDictionary-QuickDictionaryUITests/Pods-QuickDictionary-QuickDictionaryUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -109,7 +109,6 @@
 				6FAF06D35B78CEBE8EBB4BEE /* Pods-QuickDictionaryTests.debug.xcconfig */,
 				AA41B0455D59A7CB6FAAD623 /* Pods-QuickDictionaryTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -145,7 +144,7 @@
 				3174398626768AD9002DA053 /* ContentView.swift */,
 				3174398826768ADA002DA053 /* Assets.xcassets */,
 				3174398D26768ADA002DA053 /* Info.plist */,
-				C9D1B8E22679AD5B002B222F /* GoogleService-Info.plist */,
+				31F0C2BF2679BDA700437218 /* GoogleService-Info.plist */,
 				3174398A26768ADA002DA053 /* Preview Content */,
 			);
 			path = QuickDictionary;
@@ -331,7 +330,7 @@
 			files = (
 				3174398C26768ADA002DA053 /* Preview Assets.xcassets in Resources */,
 				3174398926768ADA002DA053 /* Assets.xcassets in Resources */,
-				C9D1B8E32679AD5C002B222F /* GoogleService-Info.plist in Resources */,
+				31F0C2C02679BDA700437218 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,7 +624,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"QuickDictionary/Preview Content\"";
-				DEVELOPMENT_TEAM = CP8WU382M2;
+				DEVELOPMENT_TEAM = U554ZH8R56;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = QuickDictionary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -633,7 +632,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Saksham-Gupta.QuickDictionary";
+				PRODUCT_BUNDLE_IDENTIFIER = "Soham-Gupta.QuickDictionary";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -648,7 +647,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"QuickDictionary/Preview Content\"";
-				DEVELOPMENT_TEAM = CP8WU382M2;
+				DEVELOPMENT_TEAM = U554ZH8R56;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = QuickDictionary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -656,7 +655,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Saksham-Gupta.QuickDictionary";
+				PRODUCT_BUNDLE_IDENTIFIER = "Soham-Gupta.QuickDictionary";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
