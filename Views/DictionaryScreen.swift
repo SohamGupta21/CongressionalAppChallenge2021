@@ -69,7 +69,7 @@ struct DictionaryScreen: View {
     
     func loadData() {
         self.cards.removeAll()
-        var full_word = "https://api.dictionaryapi.dev/api/v2/entries/en_US/" + word
+        let full_word = "https://api.dictionaryapi.dev/api/v2/entries/en_US/" + word
         guard let url = URL(string: full_word ) else {
             print("Your API end point is Invalid")
             return

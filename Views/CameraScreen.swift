@@ -7,6 +7,7 @@
 
 import SwiftUI
 import AVFoundation
+import Vision
 
 struct CameraScreen: View {
     init() {
@@ -63,17 +64,17 @@ struct CameraScreen: View {
                             NavigationLink(
                                 destination: DictionaryScreen(),
                                 label: {
-                                    Text("hello")
+                                    Text(camera.isSaved ? "Saved":"Save")
+                                        .foregroundColor(.black)
+                                        .fontWeight(.semibold)
+                                        .padding(.vertical, 10)
+                                        .padding(.horizontal,20)
+                                        .background(Color.white)
+                                        .clipShape(Capsule())
 //                                    Button(action: {if !camera.isSaved{camera.savePic()}}, label:{
-//                                        Text(camera.isSaved ? "Saved":"Save")
-//                                            .foregroundColor(.black)
-//                                            .fontWeight(.semibold)
-//                                            .padding(.vertical, 10)
-//                                            .padding(.horizontal,20)
-//                                            .background(Color.white)
-//                                            .clipShape(Capsule())
+//
 //                                    })
-//                                    .padding(.leading)
+                                    .padding(.leading)
                                 })
                             Spacer()
                         }else{
@@ -99,6 +100,47 @@ struct CameraScreen: View {
             .navigationBarHidden(true)
             .navigationBarTitle("", displayMode: .inline)
         }
+    }
+    
+    func textIdentification(fileURL: URL){
+        let myRequestHandler = VNImageRequestHandler(url: fileURL, options: [:])
+        
+        let myTextRecognitionRequest = VNRecognizeTextRequest()
+        
+        myTextRecognitionRequest.completionHandler = myCompletionHandler
+        
+        myTextRecognitionRequest.recognitionLevel = VNRequestTextRecognitionLevel.fast
+        
+        myTextRecognitionRequest.revision = VNRecognizeTextRequestRevision1
+        
+        myTextRecognitionRequest.usesLanguageCorrection = true
+        
+        try myRequestHandler.perform([myTextRecognitionRequest])
+        
+        // The results are in the request upon return
+        guard let results = request.results as? [VNRecognizedTextObservation] else {
+         return
+         }
+        // Iterate over the line results
+        for visionResult in results {
+         let maximumCandidates = 1
+         guard let candidate = visionResult.topCandidates(maximumCandidates).first else {
+         continue
+         }
+         print(candidate.string)
+         // Get the bounding box
+         let boundingBox = visionResult.boundingBox
+         // Get the bounding box for a specific word
+         if let range = candidate.string.range(of: "stress"),
+         let boxObservation = try? candidate.boundingBox(for: range) {
+         // Draw the box in the view
+         let foundTextBox = boxObservation.boundingBox
+         }
+        }
+    }
+    
+    func myCompletionHandler(){
+        print("completion handler")
     }
 }
 
@@ -231,3 +273,4 @@ struct CameraPreview: UIViewRepresentable{
         return
     }
 }
+
