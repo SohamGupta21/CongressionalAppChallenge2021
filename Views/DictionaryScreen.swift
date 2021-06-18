@@ -59,7 +59,7 @@ struct DictionaryScreen: View {
             
             .sheet(isPresented: $isPresented){
                 NavigationView{
-                    CardDetailedView(word: cards[cardToDisplay].word, sound: cards[cardToDisplay].sound, meaning: cards[cardToDisplay].meaning, upvotes: cards[cardToDisplay].upvotes, downvotes: cards[cardToDisplay].downvotes, partOfSpeech: cards[cardToDisplay].partOfSpeech, image: "swiftui-button", example: cards[cardToDisplay].example)
+                    CardDetailedView(word: cards[cardToDisplay].word, sound: cards[cardToDisplay].sound, meaning: cards[cardToDisplay].meaning, upvotes: cards[cardToDisplay].upvotes, downvotes: cards[cardToDisplay].downvotes, partOfSpeech: cards[cardToDisplay].partOfSpeech, image: "swiftui-button", example: cards[cardToDisplay].example, synonyms: cards[cardToDisplay].synonyms)
                         .navigationBarHidden(true)
                 }
                 
@@ -69,7 +69,6 @@ struct DictionaryScreen: View {
     
     func checkFirebase(){
         print("CHECKING FIREBASE")
-        var words: [String] = []
         let docRef = database.collection("wordsindb").document("words")
         var bool: Bool = false
 
@@ -93,9 +92,7 @@ struct DictionaryScreen: View {
                                 for document in querySnapshot!.documents {
                                     print("GOT SNAPSHOT")
                                     var data = document.data() as? [String:Any]
-                                    print(data)
                                     var definitions = document.data()["meaning-definitions"] as? [[String:Any]]
-                                    print(definitions)
                                         for definition in definitions ?? [] {
                                             let def = definition["definition"] as? String ?? ""
                                             let synonyms = definition["synonyms"] as? [String] ?? []
@@ -107,7 +104,6 @@ struct DictionaryScreen: View {
                                             _ = data?["downvotes"] as? Int ?? 0
                                             
                                             var cardToAdd = CardComponent(word: data?["word"] as! String, sound: data?["phonetics-text"] as! String, meaning: def, upvotes: data?["upvotes"] as! Int, downvotes: data?["downvotes"] as! Int, partOfSpeech: partOfSpeech, image: "swiftui-button", example: example, synonyms: synonyms)
-                                            print(cardToAdd)
                                             cards.append(cardToAdd)
                                         }
                                     }
@@ -166,7 +162,6 @@ struct DictionaryScreen: View {
                             docData["partOfSpeech"] = meaning.partOfSpeech ?? ""
                             docData["synonyms"] = meaning.definitions?[0].synonyms ?? []
                             meaningsDefinitionsToAdd.append(docData)
-                            print(meaningsDefinitionsToAdd)
                             
                         }
                         database.collection("words").document(word).setData([
@@ -191,6 +186,8 @@ struct DictionaryScreen: View {
 //                        }catch let error{
 //                            print("ERRORORORO")
 //                        }
+                        
+                        //CALL THE IMAGE API HERE
                     }
                     return
                 }else{

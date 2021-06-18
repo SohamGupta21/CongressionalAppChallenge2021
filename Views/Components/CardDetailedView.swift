@@ -19,6 +19,7 @@ struct CardDetailedView: View {
     var partOfSpeech: String
     var image: String
     var example: String
+    var synonyms: [String]
     
     let database = Firestore.firestore()
 
@@ -27,6 +28,7 @@ struct CardDetailedView: View {
         VStack(alignment: .leading) {
             ScrollView{
                 VStack(alignment: .leading){
+                    
                     Image(image)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -108,7 +110,7 @@ struct CardDetailedView: View {
 
 struct CardDetailedView_Previews: PreviewProvider {
     static var previews: some View {
-        CardDetailedView(word: "insanity", sound: "/inˈsanədē/", meaning: "the state of being seriously mentally ill", upvotes: 5, downvotes: 3, partOfSpeech: "noun", image: "swiftui-button", example: "IUHRWUI")
+        CardDetailedView(word: "insanity", sound: "/inˈsanədē/", meaning: "the state of being seriously mentally ill", upvotes: 5, downvotes: 3, partOfSpeech: "noun", image: "swiftui-button", example: "IUHRWUI", synonyms: [])
     }
 }
 

@@ -19,12 +19,12 @@ struct CameraScreen: View {
             // this only applies to big titles
             appearance.largeTitleTextAttributes = [
                 .font : UIFont.systemFont(ofSize: 20),
-                NSAttributedString.Key.foregroundColor : Color.primary
+                NSAttributedString.Key.foregroundColor : Color.blue
             ]
             // this only applies to small titles
             appearance.titleTextAttributes = [
                 .font : UIFont.systemFont(ofSize: 20),
-                NSAttributedString.Key.foregroundColor : Color.primary
+                NSAttributedString.Key.foregroundColor : Color.blue
             ]
             
             //In the following two lines you make sure that you apply the style for good
