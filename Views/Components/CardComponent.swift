@@ -18,6 +18,8 @@ struct CardComponent: View {
     var downvotes: Int
     var partOfSpeech: String
     var image: String
+    var example: String
+    var synonyms: [String]
     //upvotes, downvotes, speaker button, image, part of speech
     
     var body: some View {
@@ -96,6 +98,6 @@ struct AllButtonStyle: ButtonStyle{
 
 struct CardComponent_Previews: PreviewProvider {
     static var previews: some View {
-        CardComponent(word: "insanity", sound: "/inˈsanədē/", meaning: "the state of being seriously mentally ill", upvotes: 5, downvotes: 3, partOfSpeech: "noun", image: "swiftui-button")
+        CardComponent(word: "insanity", sound: "/inˈsanədē/", meaning: "the state of being seriously mentally ill", upvotes: 5, downvotes: 3, partOfSpeech: "noun", image: "swiftui-button", example: "WIFUHEF", synonyms: [])
     }
 }

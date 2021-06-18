@@ -55,13 +55,12 @@ struct CameraScreen: View {
                             })
                             .padding(.trailing)
                         }
-                        
                     }
                     Spacer()
                     HStack{
                         if camera.isTaken{
                             NavigationLink(
-                                destination: DictionaryScreen(),
+                                destination: DictionaryScreen(word: ""),
                                 label: {
                                     Text("hello")
 //                                    Button(action: {if !camera.isSaved{camera.savePic()}}, label:{
