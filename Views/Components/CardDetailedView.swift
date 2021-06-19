@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseFirestore
+import FirebaseAuth
 
 struct CardDetailedView: View {
     
@@ -14,12 +15,15 @@ struct CardDetailedView: View {
     var word: String
     var sound: String
     var meaning: String
-    var upvotes: Int
-    var downvotes: Int
+    @State var upvotes: Int
+    @State var downvotes: Int
     var partOfSpeech: String
     var image: String
     var example: String
     var synonyms: [String]
+    var index: Int
+    @State var upvoters: [String]
+    @State var downvoters: [String] = []
     
     let database = Firestore.firestore()
 
@@ -73,6 +77,22 @@ struct CardDetailedView: View {
                 HStack {
                     Button(action: {
                         //firebase right here
+                        print("CLICKED UPVOTE")
+                        let user = Auth.auth().currentUser?.email
+                        var docData:[String:Any] = [:]
+                        if(downvoters.contains(user!)){
+                            docData["downvotes"] = downvotes - 1
+                            docData["downvoters"] = FieldValue.arrayRemove([user!])
+                            self.downvotes -= 1
+                            self.downvoters.remove(at: downvoters.firstIndex(of: user!)!)
+                        }
+                        docData["upvotes"] = upvotes + 1
+                        docData["upvoters"] = FieldValue.arrayUnion([user!])
+                        database.collection("words").document(word).setData([
+                            "meaning-definitions": [String(index): docData]
+                        ], merge: true)
+                        self.upvotes += 1
+                        self.upvoters.append(user!)
                     }, label: {
                         Label(String(upvotes), systemImage: "hand.thumbsup")
                             .font(.callout)
@@ -82,6 +102,23 @@ struct CardDetailedView: View {
                     Spacer()
                     Button(action: {
                         //firebase right here
+                        print("CLICKED DOWNVOTE")
+                        let user = Auth.auth().currentUser?.email
+                        var docData:[String:Any] = [:]
+                        if(upvoters.contains(user!)){
+                            docData["upvotes"] = upvotes - 1
+                            docData["upvoters"] = FieldValue.arrayRemove([user!])
+                            self.upvotes -= 1
+                            print(upvoters)
+                            self.upvoters.remove(at: downvoters.firstIndex(of: user!) ?? 0)
+                        }
+                        docData["downvotes"] = downvotes + 1
+                        database.collection("words").document(word).setData([
+                            "meaning-definitions": [String(index): docData]
+                        ], merge: true)
+                        
+                        self.downvotes += 1
+                        self.upvoters.append(user!)
                     }, label: {
                         Label(String(downvotes), systemImage: "hand.thumbsdown.fill")
                             .font(.callout)
@@ -110,7 +147,7 @@ struct CardDetailedView: View {
 
 struct CardDetailedView_Previews: PreviewProvider {
     static var previews: some View {
-        CardDetailedView(word: "insanity", sound: "/inˈsanədē/", meaning: "the state of being seriously mentally ill", upvotes: 5, downvotes: 3, partOfSpeech: "noun", image: "swiftui-button", example: "IUHRWUI", synonyms: [])
+    CardDetailedView(word: "insanity", sound: "/inˈsanədē/", meaning: "the state of being seriously mentally ill", upvotes: 5, downvotes: 3, partOfSpeech: "noun", image: "swiftui-button", example: "IUHRWUI", synonyms: [], index: 0, upvoters: [], downvoters: [])
     }
 }
 
