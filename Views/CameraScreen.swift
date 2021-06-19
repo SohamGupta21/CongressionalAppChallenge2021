@@ -1,10 +1,10 @@
+
 //
 //  CameraScreen.swift
 //  QuickDictionary
 //
 //  Created by soham gupta on 6/13/21.
 //
-
 import SwiftUI
 import AVFoundation
 import Vision
@@ -20,12 +20,12 @@ struct CameraScreen: View {
             // this only applies to big titles
             appearance.largeTitleTextAttributes = [
                 .font : UIFont.systemFont(ofSize: 20),
-                NSAttributedString.Key.foregroundColor : Color.primary
+                NSAttributedString.Key.foregroundColor : Color.blue
             ]
             // this only applies to small titles
             appearance.titleTextAttributes = [
                 .font : UIFont.systemFont(ofSize: 20),
-                NSAttributedString.Key.foregroundColor : Color.primary
+                NSAttributedString.Key.foregroundColor : Color.blue
             ]
             
             //In the following two lines you make sure that you apply the style for good
@@ -56,25 +56,24 @@ struct CameraScreen: View {
                             })
                             .padding(.trailing)
                         }
-                        
                     }
                     Spacer()
                     HStack{
                         if camera.isTaken{
                             NavigationLink(
-                                destination: DictionaryScreen(),
+                                destination: DictionaryScreen(word: ""),
                                 label: {
-                                    Text(camera.isSaved ? "Saved":"Save")
-                                        .foregroundColor(.black)
-                                        .fontWeight(.semibold)
-                                        .padding(.vertical, 10)
-                                        .padding(.horizontal,20)
-                                        .background(Color.white)
-                                        .clipShape(Capsule())
+                                    Text("hello")
 //                                    Button(action: {if !camera.isSaved{camera.savePic()}}, label:{
-//
+//                                        Text(camera.isSaved ? "Saved":"Save")
+//                                            .foregroundColor(.black)
+//                                            .fontWeight(.semibold)
+//                                            .padding(.vertical, 10)
+//                                            .padding(.horizontal,20)
+//                                            .background(Color.white)
+//                                            .clipShape(Capsule())
 //                                    })
-                                    .padding(.leading)
+//                                    .padding(.leading)
                                 })
                             Spacer()
                         }else{
@@ -100,47 +99,6 @@ struct CameraScreen: View {
             .navigationBarHidden(true)
             .navigationBarTitle("", displayMode: .inline)
         }
-    }
-    
-    func textIdentification(fileURL: URL){
-        let myRequestHandler = VNImageRequestHandler(url: fileURL, options: [:])
-        
-        let myTextRecognitionRequest = VNRecognizeTextRequest()
-        
-        myTextRecognitionRequest.completionHandler = myCompletionHandler
-        
-        myTextRecognitionRequest.recognitionLevel = VNRequestTextRecognitionLevel.fast
-        
-        myTextRecognitionRequest.revision = VNRecognizeTextRequestRevision1
-        
-        myTextRecognitionRequest.usesLanguageCorrection = true
-        
-        try myRequestHandler.perform([myTextRecognitionRequest])
-        
-        // The results are in the request upon return
-        guard let results = request.results as? [VNRecognizedTextObservation] else {
-         return
-         }
-        // Iterate over the line results
-        for visionResult in results {
-         let maximumCandidates = 1
-         guard let candidate = visionResult.topCandidates(maximumCandidates).first else {
-         continue
-         }
-         print(candidate.string)
-         // Get the bounding box
-         let boundingBox = visionResult.boundingBox
-         // Get the bounding box for a specific word
-         if let range = candidate.string.range(of: "stress"),
-         let boxObservation = try? candidate.boundingBox(for: range) {
-         // Draw the box in the view
-         let foundTextBox = boxObservation.boundingBox
-         }
-        }
-    }
-    
-    func myCompletionHandler(){
-        print("completion handler")
     }
 }
 
@@ -208,6 +166,8 @@ class CameraModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate{
             DispatchQueue.main.async {
                 withAnimation{self.isTaken.toggle()}
             }
+            
+            self.recognizeText()
         }
     }
     
@@ -243,6 +203,38 @@ class CameraModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate{
         self.isSaved = true
         print("saved success")
     }
+    func recognizeText(image: UIImage = UIImage(imageLiteralResourceName: "stopsing")) {
+            guard let cgImage =  image.cgImage else {
+                return
+            }
+            
+            let handler = VNImageRequestHandler(cgImage: cgImage, options: [:])
+            
+            let request = VNRecognizeTextRequest { [weak self] request, error in
+                guard let observations = request.results as? [VNRecognizedTextObservation],
+                      error == nil else {
+                    return
+                }
+                
+                let text = observations.compactMap({
+                    $0.topCandidates(1).first?.string
+                }).joined(separator: ", ")
+                
+                DispatchQueue.main.async {
+                    print(text)
+                }
+                
+            }
+            
+            do {
+                try handler.perform([request])
+            }
+            catch {
+                print("\(error)")
+            }
+            
+            
+        }
 }
 
 struct CameraScreen_Previews: PreviewProvider {
@@ -273,4 +265,3 @@ struct CameraPreview: UIViewRepresentable{
         return
     }
 }
-

@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import FirebaseFirestore
 
 struct CardDetailedView: View {
     
@@ -18,49 +18,57 @@ struct CardDetailedView: View {
     var downvotes: Int
     var partOfSpeech: String
     var image: String
+    var example: String
+    var synonyms: [String]
+    
+    let database = Firestore.firestore()
+
     //upvotes, downvotes, speaker button, image, part of speech
     var body: some View {
         VStack(alignment: .leading) {
             ScrollView{
-                Image(image)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                Spacer()
                 VStack(alignment: .leading){
-                    Text(word)
-                        .font(.title)
-                        .foregroundColor(.primary)
-                        .lineLimit(3)
-                    Text(sound)
-                        .font(.title3)
-                        .padding(.top, -8)
-                    Text(partOfSpeech.lowercased())
-                        .font(.callout)
-                        .italic()
-                        .foregroundColor(.secondary)
-                    Text(meaning)
-                        .padding(.top, -4)
-                        .padding(.leading)
+                    
+                    Image(image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                    Spacer()
+                    VStack(alignment: .leading){
+                        Text(word)
+                            .font(.title)
+                            .foregroundColor(.primary)
+                            .lineLimit(3)
+                        Text(sound)
+                            .font(.title3)
+                            .padding(.top, -8)
+                        Text(partOfSpeech.lowercased())
+                            .font(.callout)
+                            .italic()
+                            .foregroundColor(.secondary)
+                        Text(meaning)
+                            .padding(.top, -4)
+                            .padding(.leading)
+                        
+                    }
+                    .layoutPriority(100)
+                    .padding(.top)
+                    .padding(.leading)
                     
                 }
-                .layoutPriority(100)
-                .padding(.top)
-                .padding(.leading)
-                
-                HStack{
-                    VStack(alignment:.leading){
-                        Text("Examples:")
-                            .font(.headline)
-                        Text("1. Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah oeuwrflreuf Blah Blah Blah ")
-                            .padding(.leading)
-                            .padding(.trailing)
-                        Text("2. Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah ")
-                            .padding(.leading)
-                            .padding(.trailing)
+                VStack(alignment: .leading){
+                    HStack{
+                        VStack(alignment:.leading){
+                            Text("Examples:")
+                                .font(.headline)
+                            Text(example)
+                                .padding(.leading)
+                                .padding(.trailing)
+                        }
+                        Spacer()
                     }
+                    .padding(.leading)
+                    .layoutPriority(100)
                 }
-                .padding(.leading)
-                .layoutPriority(100)
                 
                 HStack {
                     Button(action: {
@@ -94,6 +102,7 @@ struct CardDetailedView: View {
             .padding([.top, .horizontal, .bottom])
             
         }
+        .foregroundColor(Color.primary)
     }
 }
 
@@ -101,7 +110,7 @@ struct CardDetailedView: View {
 
 struct CardDetailedView_Previews: PreviewProvider {
     static var previews: some View {
-        CardDetailedView(word: "insanity", sound: "/inˈsanədē/", meaning: "the state of being seriously mentally ill", upvotes: 5, downvotes: 3, partOfSpeech: "noun", image: "swiftui-button")
+        CardDetailedView(word: "insanity", sound: "/inˈsanədē/", meaning: "the state of being seriously mentally ill", upvotes: 5, downvotes: 3, partOfSpeech: "noun", image: "swiftui-button", example: "IUHRWUI", synonyms: [])
     }
 }
 
