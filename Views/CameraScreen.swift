@@ -73,7 +73,7 @@ init() {
                             NavigationLink(
                                 destination: DictionaryScreen(word: ""),
                                 label: {
-                                    Text("Move to next screen")
+                                    Text("Move to screen")
                                 })
                             Spacer()
                         }else{
