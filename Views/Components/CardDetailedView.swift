@@ -22,18 +22,19 @@ struct CardDetailedView: View {
     var example: String
     var synonyms: [String]
     var index: Int
+
     @State var upvoters: [String]
     @State var downvoters: [String] = []
     
     let database = Firestore.firestore()
-
+    
     //upvotes, downvotes, speaker button, image, part of speech
     var body: some View {
         VStack(alignment: .leading) {
             ScrollView{
                 VStack(alignment: .leading){
                     
-                    Image(image)
+                    Image(uiImage: UIImage(data: try! Data(contentsOf: URL(string: image)!))!)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                     Spacer()
@@ -140,6 +141,7 @@ struct CardDetailedView: View {
             
         }
         .foregroundColor(Color.primary)
+        
     }
 }
 
@@ -147,7 +149,7 @@ struct CardDetailedView: View {
 
 struct CardDetailedView_Previews: PreviewProvider {
     static var previews: some View {
-    CardDetailedView(word: "insanity", sound: "/inˈsanədē/", meaning: "the state of being seriously mentally ill", upvotes: 5, downvotes: 3, partOfSpeech: "noun", image: "swiftui-button", example: "IUHRWUI", synonyms: [], index: 0, upvoters: [], downvoters: [])
+        CardDetailedView(word: "insanity", sound: "/inˈsanədē/", meaning: "the state of being seriously mentally ill", upvotes: 5, downvotes: 3, partOfSpeech: "noun", image: "swiftui-button", example: "IUHRWUI", synonyms: [], index: 0, upvoters: [], downvoters: [])
     }
 }
 
