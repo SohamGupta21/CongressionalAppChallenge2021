@@ -628,7 +628,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"QuickDictionary/Preview Content\"";
-				DEVELOPMENT_TEAM = U554ZH8R56;
+				DEVELOPMENT_TEAM = CP8WU382M2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = QuickDictionary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -636,7 +636,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Soham-Gupta.QuickDictionary";
+				PRODUCT_BUNDLE_IDENTIFIER = "Saksham-Gupta.QuickDictionary";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -651,7 +651,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"QuickDictionary/Preview Content\"";
-				DEVELOPMENT_TEAM = U554ZH8R56;
+				DEVELOPMENT_TEAM = CP8WU382M2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = QuickDictionary/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -659,7 +659,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Soham-Gupta.QuickDictionary";
+				PRODUCT_BUNDLE_IDENTIFIER = "Saksham-Gupta.QuickDictionary";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
