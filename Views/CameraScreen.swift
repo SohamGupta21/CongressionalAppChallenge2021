@@ -60,20 +60,20 @@ struct CameraScreen: View {
                     Spacer()
                     HStack{
                         if camera.isTaken{
+                            Button(action: {if !camera.isSaved{camera.savePic()}}, label:{
+                                Text(camera.isSaved ? "Saved":"Save")
+                                    .foregroundColor(.black)
+                                    .fontWeight(.semibold)
+                                    .padding(.vertical, 10)
+                                    .padding(.horizontal,20)
+                                    .background(Color.white)
+                                    .clipShape(Capsule())
+                            })
+                            .padding(.leading)
                             NavigationLink(
                                 destination: DictionaryScreen(word: ""),
                                 label: {
                                     Text("hello")
-//                                    Button(action: {if !camera.isSaved{camera.savePic()}}, label:{
-//                                        Text(camera.isSaved ? "Saved":"Save")
-//                                            .foregroundColor(.black)
-//                                            .fontWeight(.semibold)
-//                                            .padding(.vertical, 10)
-//                                            .padding(.horizontal,20)
-//                                            .background(Color.white)
-//                                            .clipShape(Capsule())
-//                                    })
-//                                    .padding(.leading)
                                 })
                             Spacer()
                         }else{
@@ -198,8 +198,7 @@ class CameraModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate{
         guard let image = UIImage(data: self.picData) else { return }
         
         //saving image
-        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-
+        self.recognizeText(image: image)
         self.isSaved = true
         print("saved success")
     }
