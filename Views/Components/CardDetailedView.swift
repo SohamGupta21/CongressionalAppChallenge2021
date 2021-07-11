@@ -57,7 +57,7 @@ struct CardDetailedView: View {
                     .layoutPriority(100)
                     .padding(.top)
                     .padding(.leading)
-                    
+                  
                 }
                 VStack(alignment: .leading){
                     HStack{
