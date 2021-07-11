@@ -37,10 +37,16 @@ Temporary Items
 
 ## User settings
 xcuserdata/
-
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcworkspace/contents.xcworkspacedata
+**/xcshareddata/WorkspaceSettings.xcsettings
+!*.xcworkspace/xcuserdata/sakshamgupta.xcuserdatad/UserInterfaceState.xcuserstate
 ## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
 *.xcscmblueprint
 *.xccheckout
+
 
 ## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
 build/
